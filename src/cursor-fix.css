@@ -1,19 +1,33 @@
-/* Hide cursor pointer in the application */
+/* Prevent text selection across the site to avoid cursor symbols */
 * {
-  cursor: default !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  caret-color: transparent !important;
 }
 
-/* Allow text selection cursor */
-p, h1, h2, h3, h4, h5, h6, span, div {
-  cursor: text !important;
+/* Allow text selection only for specific elements that need it */
+input, textarea {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
 }
 
-/* Allow clickable elements to show pointer */
-a, button, [role="button"], .clickable, input[type="submit"], input[type="button"] {
-  cursor: pointer !important;
-}
-
-/* Hide any cursor images that might be in the DOM */
-img[src*="cursor"], div[style*="cursor.png"] {
+/* Hide any elements that might be showing a cursor */
+[class*="cursor"], [id*="cursor"], [class*="caret"], [id*="caret"] {
   display: none !important;
+}
+
+/* Specific fix for the testimonial section */
+.bg-gradient-to-r.from-blue-600.to-purple-600 {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hide any standalone 'I' characters that might be cursor symbols */
+.bg-gradient-to-r.from-blue-600.to-purple-600:before,
+.bg-gradient-to-r.from-blue-600.to-purple-600:after {
+  content: none !important;
 }

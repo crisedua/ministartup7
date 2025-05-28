@@ -12,13 +12,13 @@ const BootcampPromoSection = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            EmpreDetón: De la idea a la app en tiempo récord
+            IAEmpreDetón: De la idea a la app en tiempo récord
           </h2>
           
           <p className="text-xl mb-8 text-white/90">
-            Únete al Bootcamp EmpreDetón y, desde la generación de ideas y validación, 
+            Únete al Bootcamp IAEmpreDetón y, desde la generación de ideas y validación, 
             hasta la creación de tu web app con no-code Windsurf. 
-            Al final del EmpreDetón tendrás tu(s) app(s) lista(s).
+            Al final del IAEmpreDetón tendrás tu(s) app(s) lista(s).
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">

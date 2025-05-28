@@ -58,7 +58,7 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="relative overflow-hidden shadow-xl">
+          <Card className="relative overflow-hidden shadow-xl" style={{ userSelect: 'none' }}>
             <CardContent className="p-0">
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white text-center">
                 <div className="text-6xl mb-4">{testimonials[currentTestimonial].avatar}</div>
