@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
+import '../youtube-embed.css';
 
 const HeroSection = () => {
   return (
@@ -49,13 +50,20 @@ const HeroSection = () => {
           <div className="relative animate-scale-in">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 blur-3xl opacity-30 transform rotate-6"></div>
-              <div className="relative bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
+              <div className="relative bg-white rounded-2xl shadow-2xl p-4 border border-gray-200">
                 <div className="space-y-4">
-                  <div className="h-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded w-3/4"></div>
-                  <div className="h-4 bg-gradient-to-r from-purple-200 to-purple-300 rounded w-1/2"></div>
-                  <div className="flex gap-2 items-center justify-center">
-  <img src="/validado-lanzado.png" alt="Validado y Lanzado" className="h-24 w-auto max-w-xs sm:max-w-sm md:max-w-md rounded shadow-lg" />
-</div>
+                  <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">Cómo funciona Mini-Startup</h3>
+                  <div className="aspect-w-16 aspect-h-9 overflow-hidden rounded-lg">
+                    <iframe 
+                      className="w-full h-full" 
+                      src="https://www.youtube.com/embed/VDoGcM3fGvE" 
+                      title="Mini-Startup Metodología" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  <p className="text-sm text-gray-600 text-center mt-2">Este video explica los pasos para validar y lanzar tu idea</p>
                 </div>
               </div>
             </div>
