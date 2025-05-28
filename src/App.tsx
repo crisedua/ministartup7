@@ -10,7 +10,7 @@ import Recursos from "./pages/Recursos";
 import NotFound from "./pages/NotFound";
 import ValidacionPage from "./pages/Validacion";
 import Header from "./components/Header";
-import WhatsAppButton from "./components/WhatsAppButton";
+
 
 const queryClient = new QueryClient();
 
@@ -30,7 +30,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    <WhatsAppButton />
+
     </TooltipProvider>
   </QueryClientProvider>
 );
