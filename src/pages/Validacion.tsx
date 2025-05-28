@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import '../markdown.css';
 
 // Llama a la API real de OpenAI (GPT-4o-mini) usando fetch.
 // Asegúrate de tener REACT_APP_OPENAI_API_KEY en tu .env
@@ -40,7 +42,7 @@ Guía al usuario en una validación rápida de ideas. Recoge datos clave, desaf�
 
 🟢 **Flujo de conversación**
 1. **Punto de dolor**  
-   - Pregunta: “En una frase clara, ¿qué problema doloroso quieres resolver y para quién?”  
+   - Pregunta: "En una frase clara, ¿qué painpoints quieres resolver y para quién?"  
    - Si la respuesta > 30 palabras, pídele que la acorte.
 
 2. **Promesa (Solución)**  
@@ -96,7 +98,13 @@ const ValidacionPage = () => {
           {messages.filter(m => m.role !== 'system').map((msg, i) => (
             <div key={i} className={msg.role === 'user' ? 'text-right mb-2' : 'text-left mb-2'}>
               <span className={msg.role === 'user' ? 'inline-block bg-blue-200 text-blue-900 rounded-lg px-3 py-2' : 'inline-block bg-green-200 text-green-900 rounded-lg px-3 py-2'}>
-                {msg.content}
+                {msg.role === 'user' ? (
+                  msg.content
+                ) : (
+                  <div className="markdown">
+                    <ReactMarkdown>{msg.content}</ReactMarkdown>
+                  </div>
+                )}
               </span>
             </div>
           ))}
