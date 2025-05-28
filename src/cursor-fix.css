@@ -1,0 +1,19 @@
+/* Hide cursor pointer in the application */
+* {
+  cursor: default !important;
+}
+
+/* Allow text selection cursor */
+p, h1, h2, h3, h4, h5, h6, span, div {
+  cursor: text !important;
+}
+
+/* Allow clickable elements to show pointer */
+a, button, [role="button"], .clickable, input[type="submit"], input[type="button"] {
+  cursor: pointer !important;
+}
+
+/* Hide any cursor images that might be in the DOM */
+img[src*="cursor"], div[style*="cursor.png"] {
+  display: none !important;
+}
