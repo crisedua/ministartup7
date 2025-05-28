@@ -42,7 +42,7 @@ Guía al usuario en una validación rápida de ideas. Recoge datos clave, desaf�
 
 🟢 **Flujo de conversación**
 1. **Punto de dolor**  
-   - Pregunta: "En una frase clara, ¿qué painpoints quieres resolver y para quién?"  
+   - Pregunta: "En una frase clara, ¿qué dolores quieres resolver y para quién?"  
    - Si la respuesta > 30 palabras, pídele que la acorte.
 
 2. **Promesa (Solución)**  
